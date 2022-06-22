@@ -29,15 +29,15 @@ jobs:
       #     echo ${{ secrets.STARKBANK_PEM }} >> private-key.pem
       #     cat private-key.pem
 
-      - name: Create env file
-        run: |
-          touch .env
-          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
-          echo SENTRY_DSN=${{ secrets.SENTRY_DSN }} >> .env
-          echo STARKBANK_ID=${{ secrets.STARKBANK_ID }} >> .env
-          echo STARKBANK_ENV=${{ secrets.STARKBANK_ENV }} >> .env
-          echo PRIVATE_KEY=./private-key.pem
-          cat .env
+      # - name: Create env file
+      #   run: |
+      #     touch .env
+      #     echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
+      #     echo SENTRY_DSN=${{ secrets.SENTRY_DSN }} >> .env
+      #     echo STARKBANK_ID=${{ secrets.STARKBANK_ID }} >> .env
+      #     echo STARKBANK_ENV=${{ secrets.STARKBANK_ENV }} >> .env
+      #     echo PRIVATE_KEY=./private-key.pem
+      #     cat .env
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
