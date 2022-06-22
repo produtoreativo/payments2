@@ -11,7 +11,7 @@ env:
   ECS_SERVICE: payments2-service
   ECS_CLUSTER: pay-cluster
   ECS_TASK_DEFINITION: .aws/task-definition.json
-  CONTAINER_NAME: payments
+  CONTAINER_NAME: payments2
 
 jobs:
   deploy:
